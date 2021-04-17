@@ -1,39 +1,10 @@
 <template>
-  <div class="app-container">
-    <h1>{{ pageName }}</h1>
-    <Greetings />
-    <SearchCity />
-    <CityDetail />
-    <Locations />
-    <WeatherDetails />
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
   </div>
+  <router-view />
 </template>
-
-<script>
-import SearchCity from "./components/SearchCity";
-import CityDetail from "./components/CityDetail";
-import WeatherDetails from "./components/WeatherDetails";
-import Greetings from "./components/Greetings";
-import Locations from "./components/Locations";
-
-export default {
-  name: "App",
-  data() {
-    return {
-      images: [],
-      pageName: "Weather App",
-      apiKey: "5aa2071d613105de6fff26f736a997bb",
-    };
-  },
-  components: {
-    SearchCity,
-    CityDetail,
-    WeatherDetails,
-    Greetings,
-    Locations,
-  },
-};
-</script>
 
 <style lang="scss">
 #app {
@@ -44,19 +15,16 @@ export default {
   color: #2c3e50;
 }
 
-.app-container {
-  background-image: url($main-background);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  aspect-ratio: 16/9;
-  opacity: 0.8;
-  height: 100vh;
-  width: 100vw;
+#nav {
+  padding: 30px;
 
-  h1,
-  p {
-    color: #fff;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
   }
 }
 </style>
