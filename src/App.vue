@@ -1,26 +1,62 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="app-container">
+    <h1>{{ pageName }}</h1>
+    <Greetings />
+    <SearchCity />
+    <CityDetail />
+    <Locations />
+    <WeatherDetails />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import SearchCity from "./components/SearchCity";
+import CityDetail from "./components/CityDetail";
+import WeatherDetails from "./components/WeatherDetails";
+import Greetings from "./components/Greetings";
+import Locations from "./components/Locations";
 
 export default {
   name: "App",
+  data() {
+    return {
+      images: [],
+      pageName: "Weather App",
+      apiKey: "5aa2071d613105de6fff26f736a997bb",
+    };
+  },
   components: {
-    HelloWorld,
+    SearchCity,
+    CityDetail,
+    WeatherDetails,
+    Greetings,
+    Locations,
   },
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.app-container {
+  background-image: url($main-background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  aspect-ratio: 16/9;
+  opacity: 0.8;
+  height: 100vh;
+  width: 100vw;
+
+  h1,
+  p {
+    color: #fff;
+  }
 }
 </style>
