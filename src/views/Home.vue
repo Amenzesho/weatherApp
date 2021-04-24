@@ -1,24 +1,22 @@
 <template>
-  <div class="app-container">
-    <h1>{{ pageName }}</h1>
-    <SearchCity />
+  <div>
+    <h1>Welcome to the Weather App</h1>
+    <router-link to="/searchcity">
+      <button>Get Started</button>
+    </router-link>
   </div>
 </template>
 
 <script>
-import SearchCity from "@/components/SearchCity";
+//import SearchCity from "@/components/SearchCity";
 export default {
-  name: "App",
+  name: "Home",
   data() {
     return {
-      images: [],
-      pageName: "Weather App",
       apiKey: "5aa2071d613105de6fff26f736a997bb",
     };
   },
-  components: {
-    SearchCity,
-  },
+  components: {},
 };
 </script>
 

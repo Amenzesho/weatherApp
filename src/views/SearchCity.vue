@@ -1,7 +1,12 @@
 <template>
+  <h2>Hello!</h2>
+  <h4>
+    The weather outside might be frightful but this app helps you plan ahead,to
+    make your trip delightful!
+  </h4>
   <div>
     <input type="text" class="search" placeholder="search city" />
-    <i class="fas fa-search"></i>
+    <i :icon="icon"></i>
   </div>
 </template>
 

@@ -28,6 +28,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "Locations" */ "@/views/Locations.vue"),
   },
+  {
+    path: "/searchcity",
+    name: "/SearchCity",
+    component: () =>
+      import(/* webpackChunkName: "Search" */ "@/views/SearchCity.vue"),
+  },
 ];
 
 const router = createRouter({
