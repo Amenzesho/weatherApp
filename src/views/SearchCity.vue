@@ -6,17 +6,14 @@
   </h4>
   <div>
     <input type="text" class="search" placeholder="search city" />
-    <i :icon="icon"></i>
+    <span><font-awesome-icon :icon="['fas', 'search']" /></span>
   </div>
 </template>
 
 <script>
-//import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 export default {
   data() {
-    return {
-      icon: "@/assets/search.png",
-    };
+    return {};
   },
 };
 </script>
@@ -27,5 +24,6 @@ export default {
   border-radius: 15px;
   padding: 10px 20px;
   background: transparent;
+  outline: none;
 }
 </style>
