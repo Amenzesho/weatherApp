@@ -13,7 +13,10 @@ export default {
   name: "Home",
   data() {
     return {
-      apiKey: "5aa2071d613105de6fff26f736a997bb",
+      apiKey: process.env.VUE_APP_ENV_API,
+      weather: [],
+      location: "",
+      displayWeather: false,
     };
   },
   components: {},
